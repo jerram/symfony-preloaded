@@ -1,0 +1,67 @@
+<VirtualHost *:80>
+        ServerName symfony.dev
+        ServerAdmin webmaster@localhost
+        DocumentRoot /var/vhosts/symfony/web
+#        DirectoryIndex app.php
+        <Directory />
+                Options FollowSymLinks
+                AllowOverride None
+        </Directory>
+        <Directory /var/vhosts/symfony/>
+                DirectoryIndex app.php
+                AllowOverride All
+                Order allow,deny
+                Allow from all
+                RewriteEngine On
+                RewriteCond %{REQUEST_FILENAME} !-f
+                RewriteRule ^(.*)$ app.php [QSA,L]
+                RedirectMatch permanent ^/app\.php/(.*) /$1
+                Options FollowSymLinks
+        </Directory>
+
+        ErrorLog ${APACHE_LOG_DIR}/symfony-error.log
+
+        # Possible values include: debug, info, notice, warn, error, crit,
+        # alert, emerg.
+        LogLevel warn
+
+        CustomLog ${APACHE_LOG_DIR}/symfony-access.log combined
+</VirtualHost>
+
+<IfModule mod_ssl.c>
+<VirtualHost *:443>
+        ServerName symfony.dev
+        ServerAdmin webmaster@localhost
+        DocumentRoot /var/vhosts/symfony/web
+        <Directory />
+                Options FollowSymLinks
+                AllowOverride None
+        </Directory>
+        <Directory /var/vhosts/symfony/>
+                Options FollowSymLinks
+                AllowOverride All
+                Order allow,deny
+                allow from all
+        </Directory>
+
+        ErrorLog ${APACHE_LOG_DIR}/symfony-error.log
+
+        # Possible values include: debug, info, notice, warn, error, crit,
+        # alert, emerg.
+        LogLevel warn
+
+        CustomLog ${APACHE_LOG_DIR}/symfony-access.log combined
+
+        SSLEngine on
+        SSLCertificateFile    /etc/ssl/certs/ssl-cert-snakeoil.pem
+        SSLCertificateKeyFile /etc/ssl/private/ssl-cert-snakeoil.key
+
+        BrowserMatch "MSIE [2-6]" \
+                nokeepalive ssl-unclean-shutdown \
+                downgrade-1.0 force-response-1.0
+        # MSIE 7 and newer should be able to use keepalive
+        BrowserMatch "MSIE [17-9]" ssl-unclean-shutdown
+
+</VirtualHost>
+</IfModule>
+
