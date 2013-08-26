@@ -8,6 +8,7 @@
 {% block title 'Demo Bundle' %}
 
 {% block body %}
+    {{ knp_menu_render('AcmeDemoBundle:Builder:mainMenu') }}
     {% for flashMessage in app.session.flashbag.get('notice') %}
         <div class="flash-message">
             <em>Notice</em>: {{ flashMessage }}
