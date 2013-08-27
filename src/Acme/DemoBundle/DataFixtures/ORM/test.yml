@@ -1,0 +1,6 @@
+Acme\DemoBundle\Entity\User:
+    user{1..10}:
+        username: <username()>
+        email: <email()>
+
+

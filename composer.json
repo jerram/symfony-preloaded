@@ -23,7 +23,8 @@
         "knplabs/knp-menu-bundle":"dev-master",
         "knplabs/knp-menu": "2.0.*@dev",
         "doctrine/doctrine-fixtures-bundle": "dev-master",
-        "doctrine/data-fixtures": "1.0.*@dev"
+        "doctrine/data-fixtures": "1.0.*@dev",
+        "hautelook/alice-bundle": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [
