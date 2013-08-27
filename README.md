@@ -1,15 +1,28 @@
-Symfony example bundle - every type of trick and tip in one bundle. searchable.
+Symfony example bundle - every type of trick and tip in one repo. searchable.
 
 Fosuserbundle
     https://github.com/FriendsOfSymfony/FOSUserBundle
+KNP
+    Menu
+    Paginator
+Fixtures
+    https://github.com/hautelook/AliceBundle
+    composer require hautelook/alice-bundle
+    http://symfony.com/doc/current/bundles/DoctrineFixturesBundle/index.html
+Tests
+Travis or some kind of deply script integration
+Gmail mail setup
+Less
 Bootstrap
     http://bootstrap.braincrafted.com/
 OpenAuth
 Assetic
 Migrations
     http://symfony.com/doc/current/bundles/DoctrineMigrationsBundle/index.html
-Fixtures
 http://capifony.org/
+
+
+Code examples
 services
 listeners
 multiple bundle handling / when to split your bundle
