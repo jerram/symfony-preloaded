@@ -7,12 +7,11 @@ KNP
     Paginator
 Fixtures
     https://github.com/hautelook/AliceBundle
-    composer require hautelook/alice-bundle
+    https://github.com/nelmio/alice
     http://symfony.com/doc/current/bundles/DoctrineFixturesBundle/index.html
 Tests
-Travis or some kind of deply script integration
-Gmail mail setup
 Less
+    http://www.theodo.fr/blog/2013/04/how-to-use-lesscss-without-nodejs-in-symfony2-with-assetic/
 Bootstrap
     http://bootstrap.braincrafted.com/
 OpenAuth
@@ -20,8 +19,11 @@ Assetic
 Migrations
     http://symfony.com/doc/current/bundles/DoctrineMigrationsBundle/index.html
 http://capifony.org/
+Travis or some kind of deply script integration
+Gmail mail setup
 
-
+multiple fixtures
+    http://symfony.com/doc/current/bundles/DoctrineFixturesBundle/index.html#sharing-objects-between-fixtures
 Code examples
 services
 listeners

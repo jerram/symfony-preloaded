@@ -2,7 +2,14 @@
 
 {% block head %}
     <link rel="icon" sizes="16x16" href="{{ asset('favicon.ico') }}" />
-    <link rel="stylesheet" href="{{ asset('bundles/acmedemo/css/demo.css') }}" />
+
+    {% stylesheets
+        'bundles/acmedemo/less/example.less'
+        'bundles/acmedemo/css/demo.css'
+    %}
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+
 {% endblock %}
 
 {% block title 'Demo Bundle' %}

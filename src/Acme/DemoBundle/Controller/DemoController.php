@@ -22,6 +22,15 @@ class DemoController extends Controller
     }
 
     /**
+     * @Route("/bootstrap", name="_demo_bootstrap")
+     * @Template()
+     */
+    public function bootstrapAction()
+    {
+        return array();
+    }
+
+    /**
      * @Route("/hello/{name}", name="_demo_hello")
      * @Template()
      */
