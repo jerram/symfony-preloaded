@@ -21,6 +21,8 @@ Symfony example bundle - every type of trick and tip in one repo. Searchable.
     http://capifony.org/
     Travis or some kind of deply script integration
     Gmail mail setup
+    Using non composer bundles:
+        https://github.com/liuggio/ExcelBundle with https://github.com/PHPOffice/PHPExcel (see njc)
 
     multiple fixtures
         http://symfony.com/doc/current/bundles/DoctrineFixturesBundle/index.html#sharing-objects-between-fixtures
